@@ -7,6 +7,11 @@ namespace Task1
     {
         static void Main(string[] args)
         {
+            RunTask();
+        }
+
+        static void RunTask()
+        {
             var hw = new FirstTaskService();
             hw.ShowEnglishAlphabet();
             hw.ShowEnglishAlphabetFromUnicodeTableDecNumber();

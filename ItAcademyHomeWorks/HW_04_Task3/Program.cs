@@ -7,6 +7,11 @@ namespace HW_04_Task3
     {
         static void Main(string[] args)
         {
+            RunTask();
+        }
+
+        static void RunTask()
+        {
             var hw = new ThirdTaskService();
             hw.RunThreeTask();
             Console.ReadKey();
