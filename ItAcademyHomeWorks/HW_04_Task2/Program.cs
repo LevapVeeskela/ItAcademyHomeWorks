@@ -1,7 +1,7 @@
 ﻿using System;
 using BusinessLogic.Services.HW_04;
 
-namespace Task3
+namespace Task2
 {
     class Program
     {
@@ -12,8 +12,8 @@ namespace Task3
 
         static void RunTask()
         {
-            var hw = new ТhreeTaskService();
-            hw.CalculateDeposit();
+            var hw = new SecondTaskService();
+            hw.GetSimulateProcessMoving();
             Console.ReadKey();
         }
     }
