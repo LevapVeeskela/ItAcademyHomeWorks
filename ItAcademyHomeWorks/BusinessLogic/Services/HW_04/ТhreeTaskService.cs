@@ -4,10 +4,6 @@ namespace BusinessLogic.Services.HW_04
 {
     public class ТhreeTaskService
     {
-        public ТhreeTaskService()
-        {
-        }
-
         public void CalculateDeposit(int initialSum = 1000, float percent = 2, int countMonth = 12)
         {
             Console.WriteLine($"Начальная сумма: {initialSum}");

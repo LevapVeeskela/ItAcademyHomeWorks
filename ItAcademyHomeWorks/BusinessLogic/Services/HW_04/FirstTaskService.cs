@@ -6,10 +6,6 @@ namespace BusinessLogic.Services.HW_04
 {
     public class FirstTaskService
     {
-        public FirstTaskService()
-        {
-        }
-
         public void ShowEnglishAlphabet()
         {
             var firstLetter = 'a';

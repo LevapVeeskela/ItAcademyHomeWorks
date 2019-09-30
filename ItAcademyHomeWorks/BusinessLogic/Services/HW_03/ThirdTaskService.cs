@@ -4,11 +4,6 @@ namespace BusinessLogic.Services.HW_03
 {
     public class ThirdTaskService : BaseTaskService
     {
-
-        public ThirdTaskService()
-        {
-        }
-
         public void RunThreeTask()
         {
             var userResult = GetUserResult();

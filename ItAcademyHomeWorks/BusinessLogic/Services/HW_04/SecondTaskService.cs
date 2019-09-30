@@ -7,10 +7,6 @@ namespace BusinessLogic.Services.HW_04
 {
     public class SecondTaskService
     {
-        public SecondTaskService()
-        {
-        }
-
         public void GetSimulateProcessMoving()
         {
             Console.WriteLine(HomeWorkFour.TextEnterCommandInfo);

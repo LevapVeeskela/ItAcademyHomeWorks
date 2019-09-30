@@ -6,10 +6,6 @@ namespace BusinessLogic.Services.HW_03
 {
     public class FourthTaskService : BaseTaskService
     {
-        public FourthTaskService()
-        {
-        }
-
         public void RunFourthTask()
         {
             var userOperator = GetUserOperator();
