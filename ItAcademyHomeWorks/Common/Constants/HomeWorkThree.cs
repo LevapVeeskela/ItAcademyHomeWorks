@@ -16,5 +16,6 @@
         public const string TextMinusOperatorInfo = "-";
         public const string TextMultiplyOperatorInfo = "*";
         public const string TextDivideOperatorInfo = "/";
+        public const string TextExceptionInfo = "Что-то пошло не так, проверьте корректность введённых значений! Текст ошибки: {0}";
     }
 }
