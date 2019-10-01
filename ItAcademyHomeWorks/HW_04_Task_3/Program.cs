@@ -12,8 +12,8 @@ namespace Task3
 
         static void RunTask()
         {
-            var hw = new ТhreeTaskService();
-            hw.CalculateDeposit();
+            var tts = new ТhreeTaskService();
+            tts.CalculateDeposit();
             Console.ReadKey();
         }
     }

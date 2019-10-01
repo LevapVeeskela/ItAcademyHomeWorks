@@ -12,8 +12,8 @@ namespace HW_04_Task4
 
         static void RunTask()
         {
-            var hw = new FourthTaskService();
-            hw.RunFourthTask();
+            var fts = new FourthTaskService();
+            fts.RunFourthTask();
             Console.ReadKey();
         }
     }

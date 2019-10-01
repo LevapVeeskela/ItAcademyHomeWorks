@@ -8,8 +8,8 @@ namespace BusinessLogic.Services.HW_03
         {
             var userResult = GetUserResult();
             var sumResult = GetSumFromStringValue(UserValues.FirstValue, UserValues.SecondValue);
-            CheckResult(userResult, sumResult);
-            СompareResults(userResult, sumResult);
+            CheckResult(userResult, sumResult.ToString());
+            СompareResults(userResult, sumResult.ToString());
         }
     }
 }

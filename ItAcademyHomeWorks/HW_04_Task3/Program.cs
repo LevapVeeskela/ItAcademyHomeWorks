@@ -12,8 +12,8 @@ namespace HW_04_Task3
 
         static void RunTask()
         {
-            var hw = new ThirdTaskService();
-            hw.RunThreeTask();
+            var tts = new ThirdTaskService();
+            tts.RunThreeTask();
             Console.ReadKey();
         }
     }

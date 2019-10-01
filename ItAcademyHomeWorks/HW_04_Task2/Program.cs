@@ -12,8 +12,8 @@ namespace Task2
 
         static void RunTask()
         {
-            var hw = new SecondTaskService();
-            hw.GetSimulateProcessMoving();
+            var sts = new SecondTaskService();
+            sts.GetSimulateProcessMoving();
             Console.ReadKey();
         }
     }

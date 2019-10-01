@@ -12,11 +12,11 @@ namespace Task1
 
         static void RunTask()
         {
-            var hw = new FirstTaskService();
-            hw.ShowEnglishAlphabet();
-            hw.ShowEnglishAlphabetFromUnicodeTableDecNumber();
-            hw.ShowEnglishAlphabetUnicodeTableEscapeSequence();
-            hw.ShowEnglishAlphabetUnicodeTableLinq();
+            var fts = new FirstTaskService();
+            fts.ShowEnglishAlphabet();
+            fts.ShowEnglishAlphabetFromUnicodeTableDecNumber();
+            fts.ShowEnglishAlphabetUnicodeTableEscapeSequence();
+            fts.ShowEnglishAlphabetUnicodeTableLinq();
             Console.ReadKey();
         }
     }
