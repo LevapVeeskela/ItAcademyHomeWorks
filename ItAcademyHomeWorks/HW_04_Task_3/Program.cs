@@ -12,7 +12,7 @@ namespace Task3
 
         static void RunTask()
         {
-            var tts = new ТhreeTaskService();
+            var tts = new ТhirdTaskService();
             tts.CalculateDeposit();
             Console.ReadKey();
         }
