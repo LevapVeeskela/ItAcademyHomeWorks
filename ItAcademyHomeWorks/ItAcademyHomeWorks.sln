@@ -9,11 +9,18 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Task2", "Task2\Task2.csproj
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "assets", "assets", "{508F2CB9-9FFA-42CF-9423-DFF6AE3030FD}"
 	ProjectSection(SolutionItems) = preProject
+		assets\Custom for 1000.png = assets\Custom for 1000.png
+		assets\Custom for 10000.png = assets\Custom for 10000.png
+		assets\Custom for 100000.png = assets\Custom for 100000.png
 		assets\dotPeek_task1.png = assets\dotPeek_task1.png
 		assets\dotPeek_task2.png = assets\dotPeek_task2.png
 		assets\IL code 1 page.png = assets\IL code 1 page.png
 		assets\IL code 2 page.png = assets\IL code 2 page.png
 		assets\IL code 3 page.png = assets\IL code 3 page.png
+		assets\Native for 1000.png = assets\Native for 1000.png
+		assets\Native for 10000.png = assets\Native for 10000.png
+		assets\Native for 100000.png = assets\Native for 100000.png
+		assets\Research reserve array, five HW.png = assets\Research reserve array, five HW.png
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1. ItAcademyHomeWorks.BusinessLogic", "1. ItAcademyHomeWorks.BusinessLogic", "{55A70DC1-357C-42B0-8FF3-2DF4038EDE5C}"
@@ -50,11 +57,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Task2", "HW_04_Task2\Task2.
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HW_05", "HW_05", "{7ADB242A-D2C1-4359-A428-6AB7A7C5C4D2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task1", "HW_05_Task1\Task1.csproj", "{CE1194C9-A125-4105-A174-48A7ADDBBE07}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Task1", "HW_05_Task1\Task1.csproj", "{CE1194C9-A125-4105-A174-48A7ADDBBE07}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task2", "HW_05_Task2\Task2.csproj", "{D3F330F5-10C3-42EA-AA1E-2090A0BE3CAC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Task2", "HW_05_Task2\Task2.csproj", "{D3F330F5-10C3-42EA-AA1E-2090A0BE3CAC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task3", "HW_05_Task3\Task3.csproj", "{3302EAC7-5200-4C88-B32F-05C4DA484C18}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Task3", "HW_05_Task3\Task3.csproj", "{3302EAC7-5200-4C88-B32F-05C4DA484C18}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
