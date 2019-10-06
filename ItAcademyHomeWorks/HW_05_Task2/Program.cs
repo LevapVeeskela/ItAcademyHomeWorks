@@ -13,6 +13,7 @@ namespace Task2
         static void RunTask()
         {
             var sts = new SecondTaskService();
+            sts.GetTwoArray();
             Console.ReadKey();
         }
     }

@@ -13,8 +13,8 @@ namespace Task1
         static void RunTask()
         {
             var fts = new FirstTaskService();
+            fts.GetThreeArray();
             Console.ReadKey();
         }
-
     }
 }
