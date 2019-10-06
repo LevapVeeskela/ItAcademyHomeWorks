@@ -10,10 +10,11 @@ namespace BusinessLogic.Services.HW_05
     {
         public void GetThreeArray()
         {
-            var randNum = new Random();
-            var firstArray = Enumerable.Repeat(HomeWorkFive.InitRangeValueDefault, HomeWorkFive.FinishRangeValueRepeatDefault)
-                .Select(i => randNum.Next(HomeWorkFive.InitRangeValueDefault, HomeWorkFive.FinishRangeValueDefault))
-                .ToArray();
+            var firstArray = ArrayHelper.GetArrayIntValueRandom(
+                HomeWorkFive.InitRangeValueDefault,
+                HomeWorkFive.FinishRangeValueRepeatDefault,
+                HomeWorkFive.InitRangeValueDefault,
+                HomeWorkFive.FinishRangeValueDefault).ToArray();
             int[] secondArray = new int[firstArray.Length];
             for (var i = HomeWorkFive.InitRangeValueDefault; i < firstArray.Length; i++)
             {

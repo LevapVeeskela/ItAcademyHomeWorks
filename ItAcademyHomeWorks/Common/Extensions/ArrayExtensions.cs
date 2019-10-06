@@ -12,6 +12,7 @@ namespace Common.Extensions
             return a.Zip(b, (x, y) => x + y).ToArray();
         }
 
+
         public static void WriteInConsole(this IEnumerable<int> array)
         {
             foreach (var item in array)
