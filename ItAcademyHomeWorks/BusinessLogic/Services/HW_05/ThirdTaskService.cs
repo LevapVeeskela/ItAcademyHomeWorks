@@ -28,7 +28,7 @@ namespace BusinessLogic.Services.HW_05
             }
             watching.Stop();
             array.WriteInConsole();
-            Console.WriteLine(string.Format(HomeWorkFive.StringPutternCustom, array.Length, watching.ElapsedMilliseconds));
+            Console.WriteLine(string.Format(HomeWorkFive.StringPatternCustom, array.Length, watching.ElapsedMilliseconds));
         }
 
         public void ReverseArrayNative()
@@ -45,7 +45,7 @@ namespace BusinessLogic.Services.HW_05
             Array.Reverse(array);
             watching.Stop();
             array.WriteInConsole();
-            Console.WriteLine(string.Format(HomeWorkFive.StringPutternNative, array.Length, watching.ElapsedMilliseconds));
+            Console.WriteLine(string.Format(HomeWorkFive.StringPatternNative, array.Length, watching.ElapsedMilliseconds));
         }
 
         private void ReplacementValueArray(int[] array, int index, int length)

@@ -11,15 +11,10 @@ namespace Common.Helpers
             Console.WriteLine();
             return response == ConsoleKey.Y;
         }
-      
-        public static string GetStringValueFromConsole()
-        {
-            return Console.ReadLine();
-        }
-
+        
         public static string GetStringValueFromConsole(string textInfo)
         {
-            Console.WriteLine("textInfo");
+            Console.WriteLine(textInfo);
             return Console.ReadLine();
         }
 

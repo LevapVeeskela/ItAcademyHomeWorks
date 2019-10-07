@@ -22,7 +22,7 @@ namespace BusinessLogic.Services.HW_05
                 {
                     Console.WriteLine(HomeWorkFive.FiftyLines);
                     array.WriteInConsole();
-                    var indexValue = WriteOrReadConsoleHelper.GetIntValueFromConsole(HomeWorkFive.TextInexNewValueInfo, array.Length - 1);
+                    var indexValue = WriteOrReadConsoleHelper.GetIntValueFromConsole(HomeWorkFive.TextIndexNewValueInfo, array.Length - 1);
                     var value = WriteOrReadConsoleHelper.GetIntValueFromConsole(indexValue);
                     Console.WriteLine(HomeWorkFive.FiftyLines);
                     array.ShiftElementsArray(indexValue, value);
