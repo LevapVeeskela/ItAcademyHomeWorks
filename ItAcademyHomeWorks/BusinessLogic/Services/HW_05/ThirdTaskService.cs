@@ -18,13 +18,13 @@ namespace BusinessLogic.Services.HW_05
                 HomeWorkFive.InitRangeValueDefault,
                 HomeWorkFive.FinishRangeValueDefault).ToArray();
             var middleCapacity = IsEven(array.Length) ? array.Length / 2 : array.Length / 2 + 1;
-
+            var arrayLength = array.Length;
             Console.WriteLine(HomeWorkFive.FiftyLines);
             array.WriteInConsole();
             watching.Start();
-            for (var i = HomeWorkFive.InitRangeValueDefault; i < middleCapacity; i++)
+            for (var i = 0; i < middleCapacity; i++)
             {
-                ReplacementValueArray(array, i);
+                ReplacementValueArray(array, i, arrayLength);
             }
             watching.Stop();
             array.WriteInConsole();
@@ -48,12 +48,12 @@ namespace BusinessLogic.Services.HW_05
             Console.WriteLine(string.Format(HomeWorkFive.StringPutternNative, array.Length, watching.ElapsedMilliseconds));
         }
 
-        private void ReplacementValueArray(int[] array, int index)
+        private void ReplacementValueArray(int[] array, int index, int length)
         {
+            var indexChange = length - index - 1;
             var tempValue = array[index];
-            var changeValue = array[array.Length - index - 1];
-            array[index] = changeValue;
-            array[array.Length - index - 1] = tempValue;
+            array[index] = array[indexChange];
+            array[indexChange] = tempValue;
         }
 
         private bool IsEven(int a)

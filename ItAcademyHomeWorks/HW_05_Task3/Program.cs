@@ -13,8 +13,8 @@ namespace Task3
         static void RunTask()
         {
             var tts = new ThirdTaskService();
-            tts.ReverseArrayNative();
             tts.ReverseArrayCustom();
+            tts.ReverseArrayNative();
             Console.ReadKey();
         }
     }
