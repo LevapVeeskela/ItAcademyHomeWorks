@@ -12,7 +12,6 @@ namespace BusinessLogic.Services.HW_05
         public void ReverseArrayCustom()
         {
             var watching = new Stopwatch();
-            watching.Start();
             var array = ArrayHelper.GetArrayIntValueRandom(
                 HomeWorkFive.InitRangeValueDefault,
                 WriteOrReadConsoleHelper.GetIntValueFromConsole(HomeWorkFive.TextCapacityArrayInfo),
@@ -22,20 +21,19 @@ namespace BusinessLogic.Services.HW_05
 
             Console.WriteLine(HomeWorkFive.FiftyLines);
             array.WriteInConsole();
-
+            watching.Start();
             for (var i = HomeWorkFive.InitRangeValueDefault; i < middleCapacity; i++)
             {
                 ReplacementValueArray(array, i);
             }
-            array.WriteInConsole();
             watching.Stop();
+            array.WriteInConsole();
             Console.WriteLine(string.Format(HomeWorkFive.StringPutternCustom, array.Length, watching.ElapsedMilliseconds));
         }
 
         public void ReverseArrayNative()
         {
             var watching = new Stopwatch();
-            watching.Start();
             var array = ArrayHelper.GetArrayIntValueRandom(
                 HomeWorkFive.InitRangeValueDefault,
                 WriteOrReadConsoleHelper.GetIntValueFromConsole(HomeWorkFive.TextCapacityArrayInfo),
@@ -43,9 +41,10 @@ namespace BusinessLogic.Services.HW_05
                 HomeWorkFive.FinishRangeValueDefault).ToArray();
             Console.WriteLine(HomeWorkFive.FiftyLines);
             array.WriteInConsole();
+            watching.Start();
             Array.Reverse(array);
-            array.WriteInConsole();
             watching.Stop();
+            array.WriteInConsole();
             Console.WriteLine(string.Format(HomeWorkFive.StringPutternNative, array.Length, watching.ElapsedMilliseconds));
         }
 
