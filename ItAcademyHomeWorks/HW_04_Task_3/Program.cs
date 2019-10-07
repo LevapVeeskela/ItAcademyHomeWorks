@@ -1,7 +1,7 @@
 ﻿using System;
-using BusinessLogic.Services.HW_03;
+using BusinessLogic.Services.HW_04;
 
-namespace HW_04_Task3
+namespace Task3
 {
     class Program
     {
@@ -12,8 +12,8 @@ namespace HW_04_Task3
 
         static void RunTask()
         {
-            var tts = new ThirdTaskService();
-            tts.RunThreeTask();
+            var tts = new ТhreeTaskService();
+            tts.CalculateDeposit();
             Console.ReadKey();
         }
     }

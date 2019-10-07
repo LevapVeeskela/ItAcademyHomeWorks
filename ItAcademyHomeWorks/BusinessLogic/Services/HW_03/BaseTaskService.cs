@@ -7,9 +7,9 @@ namespace BusinessLogic.Services.HW_03
 {
     public class BaseTaskService
     {
-        protected UserValuesModel UserValues;
+        protected UserValuesModel UserValues { get; set; }
 
-        public BaseTaskService()
+        protected BaseTaskService()
         {
             UserValues = new UserValuesModel
             {
@@ -17,6 +17,7 @@ namespace BusinessLogic.Services.HW_03
                 SecondValue = GetValueFromConsole(HomeWorkThree.TextInfoSecondValueInfo)
             };
         }
+
         protected string GetValueFromConsole(string textInfo)
         {
             Console.WriteLine(textInfo);
@@ -28,21 +29,27 @@ namespace BusinessLogic.Services.HW_03
             return valueFromConsole;
         }
 
-        protected long GetSumFromStringValue(string x, string y)
+        protected string GetSumFromStringValue(string x, string y)
         {
-            return Convert.ToInt64(x) + Convert.ToInt64(y);
+            return (Convert.ToInt64(x) + Convert.ToInt64(y)).ToString();
         }
 
-        protected void CheckResult(long userResult, long calculateResult)
+        protected void CheckResult(long userResult, string calculateResult)
         {
-            var isCorrectly = userResult == calculateResult;
-            Console.WriteLine(isCorrectly ? $"{HomeWorkThree.TextCorrectlyInfo}" : $"{HomeWorkThree.TextWrongInfo}");
+            if (long.TryParse(calculateResult, out long longValue))
+            {
+                Console.WriteLine(userResult == longValue ? $"{HomeWorkThree.TextCorrectlyInfo}" : $"{HomeWorkThree.TextWrongInfo}");
+            }
+            else
+            {
+                Console.WriteLine(calculateResult);
+            }
         }
 
-        protected void СompareResults(long userResult, long result)
+        protected void СompareResults(long userResult, string result)
         {
-            if (userResult != result)
-                Console.WriteLine(result > userResult ? HomeWorkThree.TextMustBeMoreInfo : HomeWorkThree.TextMustBeLessInfo);
+            if (long.TryParse(result, out long longValue) && userResult != longValue)
+                Console.WriteLine(longValue > userResult ? HomeWorkThree.TextMustBeMoreInfo : HomeWorkThree.TextMustBeLessInfo);
         }
 
         protected long GetUserResult()
@@ -54,6 +61,5 @@ namespace BusinessLogic.Services.HW_03
         {
             return GetValueFromConsole(HomeWorkThree.TextOperatorInfo);
         }
-
     }
 }

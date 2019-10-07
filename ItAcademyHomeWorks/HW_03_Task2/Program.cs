@@ -7,8 +7,13 @@ namespace HW_03_Task2
     {
         static void Main(string[] args)
         {
-            var hw = new SecondTaskService();
-            hw.RunSecondTask();
+            RunTask();
+        }
+
+        static void RunTask()
+        {
+            var sts = new SecondTaskService();
+            sts.RunSecondTask();
             Console.ReadKey();
         }
     }

@@ -7,8 +7,13 @@ namespace HW_04_Task4
     {
         static void Main(string[] args)
         {
-            var hw = new FourthTaskService();
-            hw.RunFourthTask();
+            RunTask();
+        }
+
+        static void RunTask()
+        {
+            var fts = new FourthTaskService();
+            fts.RunFourthTask();
             Console.ReadKey();
         }
     }

@@ -8,8 +8,13 @@ namespace HW_03_Task1
     {
         static void Main(string[] args)
         {
-            var hw = new FirstTaskService();
-            hw.RunFirstTask();
+            RunTask();
+        }
+
+        static void RunTask()
+        {
+            var fts = new FirstTaskService();
+            fts.RunFirstTask();
             Console.ReadKey();
         }
     }
