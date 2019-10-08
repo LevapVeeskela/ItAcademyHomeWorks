@@ -1,7 +1,7 @@
 ﻿using System;
 using BusinessLogic.Services.HW_03;
 
-namespace HW_04_Task4
+namespace Task4
 {
     class Program
     {

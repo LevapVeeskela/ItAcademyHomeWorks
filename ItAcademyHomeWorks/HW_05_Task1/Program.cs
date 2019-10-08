@@ -1,7 +1,7 @@
 ﻿using System;
-using BusinessLogic.Services.HW_03;
+using BusinessLogic.Services.HW_05;
 
-namespace Task3
+namespace Task1
 {
     class Program
     {
@@ -12,8 +12,8 @@ namespace Task3
 
         static void RunTask()
         {
-            var tts = new ThirdTaskService();
-            tts.RunThreeTask();
+            var fts = new FirstTaskService();
+            fts.GetThreeArray();
             Console.ReadKey();
         }
     }
