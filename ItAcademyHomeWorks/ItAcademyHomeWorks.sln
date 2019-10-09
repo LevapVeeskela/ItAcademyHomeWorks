@@ -12,6 +12,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "assets", "assets", "{508F2C
 		assets\dotPeek_task1.png = assets\dotPeek_task1.png
 		assets\dotPeek_task2.png = assets\dotPeek_task2.png
 		assets\FiveHw 1000000 Custom.png = assets\FiveHw 1000000 Custom.png
+		assets\HW_six_third_task.png = assets\HW_six_third_task.png
 		assets\HwFive 1000000 native.png = assets\HwFive 1000000 native.png
 		assets\IL code 1 page.png = assets\IL code 1 page.png
 		assets\IL code 2 page.png = assets\IL code 2 page.png
@@ -74,7 +75,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Task3", "HW_06_Task3\Task3.
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3. ItAcademyHomeWorks.Infrastructure", "3. ItAcademyHomeWorks.Infrastructure", "{83F5759F-C8DD-4EB7-9725-E531FD49A5CC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure", "Infrastructure\Infrastructure.csproj", "{E1EEF68C-B43B-4EFC-A9E9-FFFF70498315}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infrastructure", "Infrastructure\Infrastructure.csproj", "{E1EEF68C-B43B-4EFC-A9E9-FFFF70498315}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

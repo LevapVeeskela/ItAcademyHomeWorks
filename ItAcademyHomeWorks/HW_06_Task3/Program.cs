@@ -13,6 +13,7 @@ namespace Task3
         static void RunTask()
         {
             var tts = new ThirdTaskService();
+            tts.RunTestWrite();
             Console.ReadKey();
         }
     }
