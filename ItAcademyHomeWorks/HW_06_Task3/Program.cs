@@ -1,4 +1,5 @@
 ﻿using System;
+using BusinessLogic.Services.HW_06;
 
 namespace Task3
 {
@@ -6,7 +7,13 @@ namespace Task3
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            RunTask();
+        }
+
+        static void RunTask()
+        {
+            var tts = new ThirdTaskService();
+            Console.ReadKey();
         }
     }
 }

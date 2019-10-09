@@ -5,7 +5,7 @@ namespace Task2
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
             RunTask();
         }
@@ -13,6 +13,10 @@ namespace Task2
         static void RunTask()
         {
             var sts = new SecondTaskService();
+            sts.RemoveWordMaxLengthFromRow();
+            sts.SwapMaxWithMinLengthWord();
+            sts.CountLetterAndPunctuationMarksInRow();
+            sts.ConvertStringInArrayAndSortDescending();
             Console.ReadKey();
         }
     }
