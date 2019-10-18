@@ -11,16 +11,16 @@ namespace BusinessLogic.Services.HW_05
         public void GetThreeArray()
         {
             var firstArray = ArrayHelper.GetArrayIntValueRandom(
-                HomeWorkFive.InitRangeValueDefault,
-                HomeWorkFive.FinishRangeValueRepeatDefault,
-                HomeWorkFive.InitRangeValueDefault,
-                HomeWorkFive.FinishRangeValueDefault).ToArray();
+                Constants.HomeWorkFive.InitRangeValueDefault,
+                Constants.HomeWorkFive.FinishRangeValueRepeatDefault,
+                Constants.HomeWorkFive.InitRangeValueDefault,
+                Constants.HomeWorkFive.FinishRangeValueDefault).ToArray();
             int[] secondArray = new int[firstArray.Length];
-            for (var i = HomeWorkFive.InitRangeValueDefault; i < firstArray.Length; i++)
+            for (var i = Constants.HomeWorkFive.InitRangeValueDefault; i < firstArray.Length; i++)
             {
                 secondArray[i] = WriteOrReadConsoleHelper.GetIntValueFromConsole(i);
             }
-            Console.WriteLine(HomeWorkFive.FiftyLines);
+            Console.WriteLine(Constants.HomeWorkFive.FiftyLines);
             var thirdArray = firstArray.GetSummaryArray(secondArray);
             firstArray.WriteInConsole();
             secondArray.WriteInConsole();

@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Linq;
 using Common.Constants;
 using Common.Extensions;
 using Common.Helpers;
@@ -11,41 +10,41 @@ namespace BusinessLogic.Services.HW_06
     {
         public void RemoveWordMaxLengthFromRow()
         {
-            var row = WriteOrReadConsoleHelper.GetStringValueFromConsole(HomeWorkSix.TextInfoForEnterRowInfo);
+            var row = WriteOrReadConsoleHelper.GetStringValueFromConsole(Constants.HomeWorkSix.TextInfoForEnterRowInfo);
             var rowInfo = row.GetInfoAboutRow();
             var resultRow = row.Replace(rowInfo.MaxWord, string.Empty);
-            Console.WriteLine(HomeWorkSix.PatterLengthMaxWordRemove, resultRow);
-            Console.WriteLine(HomeWorkFive.FiftyLines);
+            Console.WriteLine(Constants.HomeWorkSix.PatterLengthMaxWordRemove, resultRow);
+            Console.WriteLine(Constants.HomeWorkFive.FiftyLines);
         }
 
         public void SwapMaxWithMinLengthWord()
         {
-            var row = WriteOrReadConsoleHelper.GetStringValueFromConsole(HomeWorkSix.TextInfoForEnterRowInfo);
+            var row = WriteOrReadConsoleHelper.GetStringValueFromConsole(Constants.HomeWorkSix.TextInfoForEnterRowInfo);
             var rowInfo = row.GetInfoAboutRow();
             var resultRow = row
-                .Replace(rowInfo.MaxWord, HomeWorkSix.SwapMaxLengthWordString)
+                .Replace(rowInfo.MaxWord, Constants.HomeWorkSix.SwapMaxLengthWordString)
                 .Replace(rowInfo.MinWord, rowInfo.MaxWord)
-                .Replace(HomeWorkSix.SwapMaxLengthWordString, rowInfo.MinWord);
-            Console.WriteLine(HomeWorkSix.PatterSwapMinWithMaxWord, resultRow);
-            Console.WriteLine(HomeWorkFive.FiftyLines);
+                .Replace(Constants.HomeWorkSix.SwapMaxLengthWordString, rowInfo.MinWord);
+            Console.WriteLine(Constants.HomeWorkSix.PatterSwapMinWithMaxWord, resultRow);
+            Console.WriteLine(Constants.HomeWorkFive.FiftyLines);
         }
 
         public void CountLetterAndPunctuationMarksInRow()
         {
-            var row = WriteOrReadConsoleHelper.GetStringValueFromConsole(HomeWorkSix.TextInfoForEnterRowInfo);
+            var row = WriteOrReadConsoleHelper.GetStringValueFromConsole(Constants.HomeWorkSix.TextInfoForEnterRowInfo);
             var countLetter = row.GetCountLettersFromRow();
             var countMarks = row.GetCountPunctuationMarksFromRow();
-            Console.WriteLine(HomeWorkSix.PatterResultLetterAndMarksInRow, countLetter, countMarks);
-            Console.WriteLine(HomeWorkFive.FiftyLines);
+            Console.WriteLine(Constants.HomeWorkSix.PatterResultLetterAndMarksInRow, countLetter, countMarks);
+            Console.WriteLine(Constants.HomeWorkFive.FiftyLines);
         }
 
         public void ConvertStringInArrayAndSortDescending()
         {
-            var row = WriteOrReadConsoleHelper.GetStringValueFromConsole(HomeWorkSix.TextInfoForEnterRowInfo);
+            var row = WriteOrReadConsoleHelper.GetStringValueFromConsole(Constants.HomeWorkSix.TextInfoForEnterRowInfo);
             var rowInfo = row.GetInfoAboutRow();
-            Console.WriteLine(HomeWorkSix.PatterLengthMinWord, rowInfo.MinWord);
-            Console.WriteLine(HomeWorkSix.PatterLengthMaxWord, rowInfo.MaxWord);
-            Console.WriteLine(HomeWorkFive.FiftyLines);
+            Console.WriteLine(Constants.HomeWorkSix.PatterLengthMinWord, rowInfo.MinWord);
+            Console.WriteLine(Constants.HomeWorkSix.PatterLengthMaxWord, rowInfo.MaxWord);
+            Console.WriteLine(Constants.HomeWorkFive.FiftyLines);
             rowInfo.ArrayRow.WriteInConsole();
         }
     }

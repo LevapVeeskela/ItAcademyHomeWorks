@@ -18,7 +18,7 @@ namespace Common.Extensions
             {
                 Console.WriteLine(item);
             }
-            Console.WriteLine(HomeWorkFive.FiftyLines);
+            Console.WriteLine(Common.Constants.Constants.HomeWorkFive.FiftyLines);
         }
 
         /// <summary>

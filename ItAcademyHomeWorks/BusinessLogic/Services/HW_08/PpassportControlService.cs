@@ -2,8 +2,7 @@
 
 namespace BusinessLogic.Services.HW_08
 {
-    internal class CheckInService: ICheckInService
+    internal class PpassportControlService : IPpassportControlService
     {
-        
     }
 }

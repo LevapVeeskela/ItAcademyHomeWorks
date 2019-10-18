@@ -17,18 +17,18 @@ namespace BusinessLogic.Services.HW_08
         {
             return new PersonModel
             {
-                Passport = string.Format(ConfigurationPersonConstants.PatternTextInitialsAndPassportInfo, WriteOrReadConsoleHelper.GetStringValueFromConsole(ConfigurationPersonConstants.TextEnterInitialInfo)),
-                IsHaveBaggage = WriteOrReadConsoleHelper.GetPromptConfirmation(ConfigurationPersonConstants.TextConfirmationHaveBaggageInfo),
+                Passport = string.Format(Constants.ConfigurationPersonConstants.PatternTextInitialsAndPassportInfo, WriteOrReadConsoleHelper.GetStringValueFromConsole(Constants.ConfigurationPersonConstants.TextEnterInitialInfo)),
+                IsHaveBaggage = WriteOrReadConsoleHelper.GetPromptConfirmation(Constants.ConfigurationPersonConstants.TextConfirmationHaveBaggageInfo),
                 WeightBags =
                     (ushort)WriteOrReadConsoleHelper.GetIntValueFromConsole(
-                        ConfigurationPersonConstants.TextWeightBaggageInfo, 40),
+                        Constants.ConfigurationPersonConstants.TextWeightBaggageInfo, 40),
                 IsHaveTickets =
-                    WriteOrReadConsoleHelper.GetPromptConfirmation(ConfigurationPersonConstants.TextConfirmationHaveTicketsInfo),
+                    WriteOrReadConsoleHelper.GetPromptConfirmation(Constants.ConfigurationPersonConstants.TextConfirmationHaveTicketsInfo),
                 CountryDestination =
                     WriteOrReadConsoleHelper.GetStringValueFromConsole(
-                        ConfigurationPersonConstants.TextEnterCountryDestinationInfo),
+                        Constants.ConfigurationPersonConstants.TextEnterCountryDestinationInfo),
                 IsHaveVisa =
-                    WriteOrReadConsoleHelper.GetPromptConfirmation(ConfigurationPersonConstants.TextConfirmationHaveVisaInfo)
+                    WriteOrReadConsoleHelper.GetPromptConfirmation(Constants.ConfigurationPersonConstants.TextConfirmationHaveVisaInfo)
             };
         }
 

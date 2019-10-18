@@ -8,24 +8,24 @@ namespace Common.Helpers
     {
         public static string GetProcessMoving(string command) => command switch
         {
-            HomeWorkFour.TextCommandMoveUpInfo => HomeWorkFour.TextMoveUpInfo,
-            HomeWorkFour.TextAlternativeCommandMoveUpInfo => HomeWorkFour.TextMoveUpInfo,
-            HomeWorkFour.TextCommandMoveDownInfo => HomeWorkFour.TextMoveDownInfo,
-            HomeWorkFour.TextAlternativeCommandMoveDownInfo => HomeWorkFour.TextMoveDownInfo,
-            HomeWorkFour.TextCommandMoveRightInfo => HomeWorkFour.TextMoveRightInfo,
-            HomeWorkFour.TextAlternativeCommandMoveRightInfo => HomeWorkFour.TextMoveDownInfo,
-            HomeWorkFour.TextCommandMoveLeftInfo => HomeWorkFour.TextMoveLeftInfo,
-            HomeWorkFour.TextAlternativeCommandMoveLeftInfo => HomeWorkFour.TextMoveLeftInfo,
-            _ => HomeWorkFour.TextWrongCommandInfo
+            Constants.Constants.HomeWorkFour.TextCommandMoveUpInfo => Constants.Constants.HomeWorkFour.TextMoveUpInfo,
+            Constants.Constants.HomeWorkFour.TextAlternativeCommandMoveUpInfo => Constants.Constants.HomeWorkFour.TextMoveUpInfo,
+            Constants.Constants.HomeWorkFour.TextCommandMoveDownInfo => Constants.Constants.HomeWorkFour.TextMoveDownInfo,
+            Constants.Constants.HomeWorkFour.TextAlternativeCommandMoveDownInfo => Constants.Constants.HomeWorkFour.TextMoveDownInfo,
+            Constants.Constants.HomeWorkFour.TextCommandMoveRightInfo => Constants.Constants.HomeWorkFour.TextMoveRightInfo,
+            Constants.Constants.HomeWorkFour.TextAlternativeCommandMoveRightInfo => Constants.Constants.HomeWorkFour.TextMoveDownInfo,
+            Constants.Constants.HomeWorkFour.TextCommandMoveLeftInfo => Constants.Constants.HomeWorkFour.TextMoveLeftInfo,
+            Constants.Constants.HomeWorkFour.TextAlternativeCommandMoveLeftInfo => Constants.Constants.HomeWorkFour.TextMoveLeftInfo,
+            _ => Constants.Constants.HomeWorkFour.TextWrongCommandInfo
         };
 
         public static string GetProcessMoving(HwFourCommandsEnum command) => command switch
         {
-            Up => HomeWorkFour.TextMoveUpInfo,
-            Down => HomeWorkFour.TextMoveDownInfo,
-            Right => HomeWorkFour.TextMoveRightInfo,
-            Left => HomeWorkFour.TextMoveLeftInfo,
-            _ => HomeWorkFour.TextWrongCommandInfo
+            Up => Constants.Constants.HomeWorkFour.TextMoveUpInfo,
+            Down => Constants.Constants.HomeWorkFour.TextMoveDownInfo,
+            Right => Constants.Constants.HomeWorkFour.TextMoveRightInfo,
+            Left => Constants.Constants.HomeWorkFour.TextMoveLeftInfo,
+            _ => Constants.Constants.HomeWorkFour.TextWrongCommandInfo
         };
     }
 }

@@ -13,13 +13,13 @@ namespace BusinessLogic.Services.HW_05
         {
             var watching = new Stopwatch();
             var array = ArrayHelper.GetArrayIntValueRandom(
-                HomeWorkFive.InitRangeValueDefault,
-                WriteOrReadConsoleHelper.GetIntValueFromConsole(HomeWorkFive.TextCapacityArrayInfo),
-                HomeWorkFive.InitRangeValueDefault,
-                HomeWorkFive.FinishRangeValueDefault).ToArray();
+                Constants.HomeWorkFive.InitRangeValueDefault,
+                WriteOrReadConsoleHelper.GetIntValueFromConsole(Constants.HomeWorkFive.TextCapacityArrayInfo),
+                Constants.HomeWorkFive.InitRangeValueDefault,
+                Constants.HomeWorkFive.FinishRangeValueDefault).ToArray();
             var middleCapacity = IsEven(array.Length) ? array.Length / 2 : array.Length / 2 + 1;
             var arrayLength = array.Length;
-            Console.WriteLine(HomeWorkFive.FiftyLines);
+            Console.WriteLine(Constants.HomeWorkFive.FiftyLines);
             array.WriteInConsole();
             watching.Start();
             for (var i = 0; i < middleCapacity; i++)
@@ -28,24 +28,24 @@ namespace BusinessLogic.Services.HW_05
             }
             watching.Stop();
             array.WriteInConsole();
-            Console.WriteLine(string.Format(HomeWorkFive.StringPatternCustom, array.Length, watching.ElapsedMilliseconds));
+            Console.WriteLine(string.Format(Constants.HomeWorkFive.StringPatternCustom, array.Length, watching.ElapsedMilliseconds));
         }
 
         public void ReverseArrayNative()
         {
             var watching = new Stopwatch();
             var array = ArrayHelper.GetArrayIntValueRandom(
-                HomeWorkFive.InitRangeValueDefault,
-                WriteOrReadConsoleHelper.GetIntValueFromConsole(HomeWorkFive.TextCapacityArrayInfo),
-                HomeWorkFive.InitRangeValueDefault,
-                HomeWorkFive.FinishRangeValueDefault).ToArray();
-            Console.WriteLine(HomeWorkFive.FiftyLines);
+                Constants.HomeWorkFive.InitRangeValueDefault,
+                WriteOrReadConsoleHelper.GetIntValueFromConsole(Constants.HomeWorkFive.TextCapacityArrayInfo),
+                Constants.HomeWorkFive.InitRangeValueDefault,
+                Constants.HomeWorkFive.FinishRangeValueDefault).ToArray();
+            Console.WriteLine(Constants.HomeWorkFive.FiftyLines);
             array.WriteInConsole();
             watching.Start();
             Array.Reverse(array);
             watching.Stop();
             array.WriteInConsole();
-            Console.WriteLine(string.Format(HomeWorkFive.StringPatternNative, array.Length, watching.ElapsedMilliseconds));
+            Console.WriteLine(string.Format(Constants.HomeWorkFive.StringPatternNative, array.Length, watching.ElapsedMilliseconds));
         }
 
         private void ReplacementValueArray(int[] array, int index, int length)
