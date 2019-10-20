@@ -3,7 +3,7 @@
 namespace AssemblyOne
 {
     /// <summary>
-    /// Available from any assembly, because access modifier public
+    /// Available from any assembly, because access modifier public.
     /// </summary>
     public sealed class MotorcyclePublic: MotorcycleAbstract
     {

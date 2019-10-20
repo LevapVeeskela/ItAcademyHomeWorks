@@ -19,8 +19,8 @@ namespace BusinessLogic.Services.HW_06
             {
                 var pathVerseBlank = Path.Combine(Constants.HomeWorkSix.PathSolution, Constants.HomeWorkSix.NameFile);
                 var fullPathFile = WriteOrReadConsoleHelper.GetPromptConfirmation(pathVerseBlank)
-                ? pathVerseBlank
-                : Path.Combine(Console.ReadLine());
+                                   ? pathVerseBlank
+                                   : Path.Combine(Console.ReadLine());
                 verseArray = GetVerseFromFile(new FileInfo(fullPathFile), Constants.HomeWorkSix.DefaultSeparator).ToArray();
             }
             else

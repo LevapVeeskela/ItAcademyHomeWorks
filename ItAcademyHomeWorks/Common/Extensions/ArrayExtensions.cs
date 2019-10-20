@@ -22,13 +22,13 @@ namespace Common.Extensions
         }
 
         /// <summary>
-        /// Задаёт новое значение элемента в указанном индексе и сдвигает правую часть 
+        /// Задаёт новое значение элемента в указанном индексе и сдвигает правую часть.
         /// </summary>
-        /// <typeparam name="T">Любой тип</typeparam>
-        /// <param name="originCollection">Массив элементов</param>
-        /// <param name="replaceableIndex">Индекс заменяемого элемента</param>
-        /// <param name="newValue">Новое значение</param>
-        /// <returns></returns>
+        /// <typeparam name="T">Любой тип.</typeparam>
+        /// <param name="originCollection">Массив элементов.</param>
+        /// <param name="replaceableIndex">Индекс заменяемого элемента.</param>
+        /// <param name="newValue">Новое значение.</param>
+        /// <returns>Массив.</returns>
         public static T[] ShiftElementsArray<T>(this T[] originCollection, int replaceableIndex, T newValue)
         {
             var rightPatchArray = originCollection.Where((el, index) => index >= replaceableIndex && index != originCollection.Length - 1).ToArray();

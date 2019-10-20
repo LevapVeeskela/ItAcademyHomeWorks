@@ -37,10 +37,10 @@ namespace Common.Extensions
         }
 
         /// <summary>
-        /// Get count letter in row only
+        /// Get count letter in row only.
         /// </summary>
-        /// <param name="row">Origin row</param>
-        /// <returns></returns>
+        /// <param name="row">Origin row.</param>
+        /// <returns>Count letters from row.</returns>
         public static int GetCountLettersFromRow(this string row)
         {
             var regex = new Regex(Constants.Constants.HomeWorkSix.PatternRegexLetter, RegexOptions.IgnoreCase);
@@ -48,10 +48,10 @@ namespace Common.Extensions
         }
 
         /// <summary>
-        /// Get count punctuation marks in row
+        /// Get count punctuation marks in row.
         /// </summary>
-        /// <param name="row">Origin row</param>
-        /// <returns></returns>
+        /// <param name="row">Origin row.</param>
+        /// <returns>Count punctuation marks from row.</returns>
         public static int GetCountPunctuationMarksFromRow(this string row)
         {
             var regex = new Regex(Constants.Constants.HomeWorkSix.PatterRegexNotLetter, RegexOptions.IgnoreCase);

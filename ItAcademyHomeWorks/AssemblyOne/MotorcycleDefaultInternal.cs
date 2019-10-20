@@ -3,7 +3,7 @@
 namespace AssemblyOne
 {
     /// <summary>
-    /// Default access modifier Internal 
+    /// Default access modifier Internal. 
     /// </summary>
     sealed class MotorcycleDefaultInternal : IMotorcycle
     {
