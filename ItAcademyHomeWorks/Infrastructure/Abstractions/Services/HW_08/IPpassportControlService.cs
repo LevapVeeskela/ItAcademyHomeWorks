@@ -1,10 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using Common.Models;
 
-namespace Infrastructure.Abstractions.Services
+namespace Infrastructure.Abstractions.Services.HW_08
 {
-    public interface IPpassportControlService
+    public interface IPassportControlService
     {
+        bool CheckInBaseData(PersonModel person);
+
+        bool CheckVisa(PersonModel person);
+
+        void SetVisa(PersonModel person);
     }
 }

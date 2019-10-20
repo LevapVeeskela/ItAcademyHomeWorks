@@ -4,31 +4,49 @@ namespace Common.Constants
 {
     public static class Constants
     {
-        public static class CheckInConstants
+        public static class ConfigurationPerson
         {
-            public const string FormatDate = "M-d-yyyy dddd HH:mm:ss";
-            public const string PatternTextWelcomeInfo = "Здравствуйте, это аэропорт Минск-2, национальный аэпорт Республики Беларусь, сейчас {0} по местному времени, меня зовут Ерашевич Диана, я буду проводить вашу регистрацию, вы проходили регистрацию в интернете?";
-            public const string TextGetPassportInfo = "Предоставьте, пожалуйста, ваш паспорт";
-            public const string TextGetPassportAndTicketInfo = "Предоставьте, пожалуйста, ваш паспорт и билет";
-        }
-
-        public static class ConfigurationPersonConstants
-        {
+            public const string TextStageConfigurationPersonInfo = "Этап создания персонажа";
             public const string TextEnterInitialInfo = "Введите Ф.И.О. персонажа";
             public const string PatternTextInitialsAndPassportInfo = "Паспорт, {0}";
             public const string TextConfirmationHaveBaggageInfo = "Имете ли вы багаж?";
             public const string TextWeightBaggageInfo = "Введите вес багажа, максимальный вес 40кг";
+            public const string TextConfirmationHaveCarryonInfo = "Имеется ли ручная кладь?";
             public const string TextEnterCountryDestinationInfo = "Введите название страны куда вы хотите политеть";
             public const string TextConfirmationHaveTicketsInfo = "Имеете ли вы заранее распечатанные билеты?";
+            public const string TextConfirmationHaveProhibitedItemsInfo = "Имеет ли персонаж запрещённые предметы?";
             public const string TextConfirmationHaveVisaInfo = "Есть ли у вас виза данной страны?";
         }
+
+        public static class CheckIn
+        {
+            public const string TextStageCheckInInfo = "Этап регистрации";
+            public const int ValueLimitWeightBaggage = 40;
+            public const string FormatDate = "M-d-yyyy dddd HH:mm:ss";
+            public const string PatternTextWelcomeInfo = "Здравствуйте, это аэропорт Минск-2, национальный аэпорт Республики Беларусь, сейчас {0} по местному времени, меня зовут Ерашевич Диана, я буду проводить вашу регистрацию на полёт в {1}, вы проходили регистрацию в интернете?";
+            public const string TextGetPassportInfo = "Предоставьте, пожалуйста, ваш паспорт";
+            public const string TextGetPassportAndTicketInfo = "Предоставьте, пожалуйста, ваш паспорт и билет";
+            public const string TextDutyBaggageInfo = "Вы должны оплатить пошлину за богаж, так как ваш вес богажа превышает допустимый";
+        }
+
+        public static class SecurityCheck
+        {
+            public const string TextStageSecurityCheckInfo = "Этап проверки личных вещей и ручной клади";
+            public const string TextCheckCarryonInfo = "Проверька ручной клади на наличие запрещённых предметов.";
+            public const string TextCheckPersonInfo = "Проверька ренгеном на наличие у вас посторонних предметов.";
+        } 
+
+        public static class PassportControl
+        {
+            public const string TextStageSPassportControlInfo = "Этап проверки личности и визы";
+            public const string TextImitationCheckPassportInBdInfo = "Иммитируется проверка в БД паспартов.";
+            public const string TextConfirmationVisaInfo = "Нужна ли виза в {0}";
+        }
         
-        public static class RegistrationBaseConstants
+        public static class RegistrationBase
         {
             public const string PatternTextSuccessFlyInfo = "{0} успешно прошёл все тягости регистрации и улетел в {1}, попивать вискарёк в бассейне!";
-            public const string PatternTextRejectRegistrationInfo = "{0} не прошёл регистрацию и не улетел в {1}"";
-
-
+            public const string PatternTextRejectRegistrationInfo = "{0} не прошёл регистрацию и не улетел в {1}";
         }
 
         public static class HomeWorkFive
@@ -42,6 +60,7 @@ namespace Common.Constants
             public const string StringPatternCustom = "Custom for {0} items: {1} mls";
             public static string FiftyLines = new string('-', FinishRangeValueDefault);
         }
+
         public static class HomeWorkFour
         {
             public const string TextEnglishAlphabetUnicodeInfo = "Английский алфавит из UnicodeTable";

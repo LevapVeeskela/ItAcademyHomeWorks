@@ -1,52 +1,94 @@
-﻿using Infrastructure.Abstractions.Services;
-using System;
+﻿using System;
 using Common.Constants;
+using Common.Helpers;
+using Infrastructure.Abstractions.Services.HW_08;
 
 namespace BusinessLogic.Services.HW_08
 {
     public class RegistrationBaseService
     {
-        private readonly IConfigurationPersonService _cps; 
+        private readonly IConfigurationPersonService _cps;
         private readonly ICheckInService _cis;
         private readonly ISecurityCheckService _scs;
-        private readonly IPpassportControlService _pcs;
+        private readonly IPassportControlService _pcs;
 
-        public RegistrationBaseService()
+        public RegistrationBaseService(IConfigurationPersonService cps, ICheckInService cis, ISecurityCheckService scs, IPassportControlService pcs)
         {
-            _cps = new ConfigurationPersonService();
-            _cis = new CheckInService();
-            _scs = new SecurityCheckService();
-            _pcs = new PpassportControlService();
+            _cps = cps;
+            _cis = cis;
+            _scs = scs;
+            _pcs = pcs;
         }
-        
+
         public bool RunRegistration()
         {
-            return RunCheckIn() && RunSecurityCheck() && RunPpassportControl();
+            return RunCheckIn() && RunSecurityCheck() && RunPassportControl();
         }
 
         public bool RunCheckIn()
         {
-            return true;
+            Console.WriteLine(Constants.HomeWorkFive.FiftyLines);
+            Console.WriteLine(Constants.CheckIn.TextStageCheckInInfo);
+
+            var person = _cps.GetInfoPerson();
+            var result = _cis.CheckTickets(person);
+
+            if (person.IsHaveBaggage)
+            {
+                _cis.ClaimBaggage(person);
+            }
+
+            return result;
         }
 
         public bool RunSecurityCheck()
         {
-            return true;
-        } 
+            Console.WriteLine(Constants.HomeWorkFive.FiftyLines);
+            Console.WriteLine(Constants.SecurityCheck.TextStageSecurityCheckInfo);
 
-        public bool RunPpassportControl()
+            var person = _cps.GetInfoPerson();
+            var result = _scs.CheckPerson(person);
+
+            if (person.IsHaveCarryon)
+            {
+                result = result && _scs.CheckCarryon(person);
+            }
+
+            return result;
+        }
+
+        public bool RunPassportControl()
         {
-            return true;
+            Console.WriteLine(Constants.HomeWorkFive.FiftyLines);
+            Console.WriteLine(Constants.PassportControl.TextStageSPassportControlInfo);
+
+            var person = _cps.GetInfoPerson();
+            var result = _pcs.CheckInBaseData(person);
+
+            if (WriteOrReadConsoleHelper.GetPromptConfirmation(string.Format(Constants.PassportControl.TextConfirmationVisaInfo, person.CountryDestination)))
+            {
+                if (_pcs.CheckVisa(person))
+                {
+                    _pcs.SetVisa(person);
+                    result = person.IsHaveVisa;
+                }
+            }
+
+            return result;
         }
 
         public void GetResult()
         {
+            Console.WriteLine(Constants.HomeWorkFive.FiftyLines);
             var person = _cps.GetInfoPerson();
+
             if (RunRegistration())
             {
-                Console.WriteLine(Constants.RegistrationBaseConstants.PatternTextSuccessFlyInfo, person.Passport, person.CountryDestination);
+                Console.WriteLine(Constants.RegistrationBase.PatternTextSuccessFlyInfo, person.Passport, person.CountryDestination);
+                return;
             }
-            Console.WriteLine(Constants.RegistrationBaseConstants.PatternTextRejectRegistrationInfo, person.Passport, person.CountryDestination);
+
+            Console.WriteLine(Constants.RegistrationBase.PatternTextRejectRegistrationInfo, person.Passport, person.CountryDestination);
         }
     }
 }

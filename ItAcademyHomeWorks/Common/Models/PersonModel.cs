@@ -8,7 +8,11 @@
 
         public bool IsHaveBaggage { get; set; }
 
-        public ushort WeightBags { get; set; }
+        public ushort? WeightBags { get; set; }
+
+        public bool IsHaveProhibitedItems { get; set; }
+
+        public bool IsHaveCarryon { get; set; }
 
         public string CountryDestination { get; set; }
 

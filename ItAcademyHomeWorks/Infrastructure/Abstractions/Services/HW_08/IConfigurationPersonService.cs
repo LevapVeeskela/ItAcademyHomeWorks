@@ -1,6 +1,6 @@
 ﻿using Common.Models;
 
-namespace Infrastructure.Abstractions.Services
+namespace Infrastructure.Abstractions.Services.HW_08
 {
     public interface IConfigurationPersonService
     {
