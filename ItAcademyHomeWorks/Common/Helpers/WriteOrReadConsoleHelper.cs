@@ -10,6 +10,7 @@ namespace Common.Helpers
             Console.Write(WriteOrReadConsole.PatternTextPromptConfirmationInfo, confirmText);
 
             var response = Console.ReadKey(false).Key;
+            Console.WriteLine();
 
             return response == ConsoleKey.Y;
         }
