@@ -4,10 +4,23 @@ namespace Common.Helpers
 {
     public static class WriteOrReadConsoleHelper
     {
+        public static bool GetPromptConfirmation(string confirmText)
+        {
+            Console.Write($"{confirmText} [y/n] : ");
+            var response = Console.ReadKey(false).Key;
+            Console.WriteLine();
+            return response == ConsoleKey.Y;
+        }
+        
+        public static string GetStringValueFromConsole(string textInfo)
+        {
+            Console.WriteLine(textInfo);
+            return Console.ReadLine();
+        }
 
         public static int GetIntValueFromConsole()
         {
-            Console.WriteLine($"Please, enter number");
+            Console.WriteLine("Please, enter number");
             return GetIntValue();
         }
 
