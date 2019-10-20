@@ -9,11 +9,11 @@ namespace BusinessLogic.Services.HW_03
         {
             try
             {
-                Console.WriteLine($"{HomeWorkThree.TextResultInfo} = {GetSumFromStringValue(UserValues.FirstValue, UserValues.SecondValue).ToString()}");
+                Console.WriteLine($"{Constants.HomeWorkThree.TextResultInfo} = {GetSumFromStringValue(UserValues.FirstValue, UserValues.SecondValue).ToString()}");
             }
             catch (Exception e)
             {
-                Console.WriteLine(string.Format(HomeWorkThree.TextExceptionInfo, e));
+                Console.WriteLine(string.Format(Constants.HomeWorkThree.TextExceptionInfo, e));
             }
         }
     }

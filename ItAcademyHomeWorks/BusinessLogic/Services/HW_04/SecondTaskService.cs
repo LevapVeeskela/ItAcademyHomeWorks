@@ -9,7 +9,7 @@ namespace BusinessLogic.Services.HW_04
     {
         public void GetSimulateProcessMoving()
         {
-            Console.WriteLine(HomeWorkFour.TextEnterCommandInfo);
+            Console.WriteLine(Constants.HomeWorkFour.TextEnterCommandInfo);
             while (true)
             {
                 var command = Console.ReadLine();

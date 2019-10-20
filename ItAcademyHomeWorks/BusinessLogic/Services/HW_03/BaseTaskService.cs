@@ -13,8 +13,8 @@ namespace BusinessLogic.Services.HW_03
         {
             UserValues = new UserValuesModel
             {
-                FirstValue = GetValueFromConsole(HomeWorkThree.TextInfoFirstValueInfo),
-                SecondValue = GetValueFromConsole(HomeWorkThree.TextInfoSecondValueInfo)
+                FirstValue = GetValueFromConsole(Constants.HomeWorkThree.TextInfoFirstValueInfo),
+                SecondValue = GetValueFromConsole(Constants.HomeWorkThree.TextInfoSecondValueInfo)
             };
         }
 
@@ -38,7 +38,7 @@ namespace BusinessLogic.Services.HW_03
         {
             if (long.TryParse(calculateResult, out long longValue))
             {
-                Console.WriteLine(userResult == longValue ? $"{HomeWorkThree.TextCorrectlyInfo}" : $"{HomeWorkThree.TextWrongInfo}");
+                Console.WriteLine(userResult == longValue ? $"{Constants.HomeWorkThree.TextCorrectlyInfo}" : $"{Constants.HomeWorkThree.TextWrongInfo}");
             }
             else
             {
@@ -49,17 +49,17 @@ namespace BusinessLogic.Services.HW_03
         protected void СompareResults(long userResult, string result)
         {
             if (long.TryParse(result, out long longValue) && userResult != longValue)
-                Console.WriteLine(longValue > userResult ? HomeWorkThree.TextMustBeMoreInfo : HomeWorkThree.TextMustBeLessInfo);
+                Console.WriteLine(longValue > userResult ? Constants.HomeWorkThree.TextMustBeMoreInfo : Constants.HomeWorkThree.TextMustBeLessInfo);
         }
 
         protected long GetUserResult()
         {
-            return Convert.ToInt64(GetValueFromConsole(HomeWorkThree.TextUserResultInfo));
+            return Convert.ToInt64(GetValueFromConsole(Constants.HomeWorkThree.TextUserResultInfo));
         }
 
         protected string GetUserOperator()
         {
-            return GetValueFromConsole(HomeWorkThree.TextOperatorInfo);
+            return GetValueFromConsole(Constants.HomeWorkThree.TextOperatorInfo);
         }
     }
 }
