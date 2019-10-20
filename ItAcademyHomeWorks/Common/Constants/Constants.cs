@@ -4,6 +4,14 @@ namespace Common.Constants
 {
     public static class Constants
     {
+        public static class WriteOrReadConsole
+        {
+            public const string PatternTextPromptConfirmationInfo = "{0} [y/n] : ";
+            public const string TextEnterValueInfo = "Please, enter number";
+            public const string TextEnterValueIndexInfo = "Please, enter {0} element of array";
+            public const string TextEnterValueAgainInfo = "Please, try to enter again";
+        }
+
         public static class ConfigurationPerson
         {
             public const string TextStageConfigurationPersonInfo = "Этап создания персонажа";
