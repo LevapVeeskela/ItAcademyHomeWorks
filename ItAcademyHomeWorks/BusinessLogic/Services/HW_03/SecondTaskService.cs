@@ -13,7 +13,7 @@ namespace BusinessLogic.Services.HW_03
             }
             catch (Exception e)
             {
-                Console.WriteLine(string.Format(HomeWorkThree.TextExceptionInfo, e));
+                Console.WriteLine(string.Format(Constants.HomeWorkThree.TextExceptionInfo, e));
             }
         }
     }
