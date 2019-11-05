@@ -10,16 +10,16 @@ namespace BusinessLogic.Services.HW_08
     {
         public bool CheckTickets(PersonModel person)
         {
-            var isHaveTickets = WriteOrReadConsoleHelper.GetPromptConfirmation(string.Format(Constants.CheckIn.PatternTextWelcomeInfo, DateTime.Now.ToString(Constants.CheckIn.FormatDate), person.CountryDestination));
+            var isHaveTickets = WriteOrReadConsoleHelper.GetPromptConfirmation(string.Format(Constants.HomeWorkEight.CheckIn.PatternTextWelcomeInfo, DateTime.Now.ToString(Constants.HomeWorkEight.CheckIn.FormatDate), person.CountryDestination));
 
             if (!isHaveTickets)
             {
-                Console.WriteLine(Constants.CheckIn.TextGetPassportInfo);
+                Console.WriteLine(Constants.HomeWorkEight.CheckIn.TextGetPassportInfo);
                 SetTickets(person);
                 return person.IsHaveTickets;
             }
 
-            Console.WriteLine(Constants.CheckIn.TextGetPassportAndTicketInfo);
+            Console.WriteLine(Constants.HomeWorkEight.CheckIn.TextGetPassportAndTicketInfo);
 
             return person.IsHaveTickets;
         }
@@ -31,9 +31,9 @@ namespace BusinessLogic.Services.HW_08
 
         public bool ClaimBaggage(PersonModel person)
         {
-            if (person.WeightBags > Constants.CheckIn.ValueLimitWeightBaggage)
+            if (person.WeightBags > Constants.HomeWorkEight.CheckIn.ValueLimitWeightBaggage)
             {
-                Console.WriteLine(Constants.CheckIn.TextDutyBaggageInfo);
+                Console.WriteLine(Constants.HomeWorkEight.CheckIn.TextDutyBaggageInfo);
             }
             return person.IsHaveBaggage;
         }

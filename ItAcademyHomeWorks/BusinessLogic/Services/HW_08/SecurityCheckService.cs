@@ -11,7 +11,7 @@ namespace BusinessLogic.Services.HW_08
         {
             if (person.IsHaveCarryon)
             {
-                Console.WriteLine(Constants.SecurityCheck.TextCheckCarryonInfo);
+                Console.WriteLine(Constants.HomeWorkEight.SecurityCheck.TextCheckCarryonInfo);
                 return !person.IsHaveProhibitedItems;
             }
 
@@ -22,7 +22,7 @@ namespace BusinessLogic.Services.HW_08
         {
             if (person.IsHaveCarryon)
             {
-                Console.WriteLine(Constants.SecurityCheck.TextCheckPersonInfo);
+                Console.WriteLine(Constants.HomeWorkEight.SecurityCheck.TextCheckPersonInfo);
                 return !person.IsHaveProhibitedItems;
             }
 

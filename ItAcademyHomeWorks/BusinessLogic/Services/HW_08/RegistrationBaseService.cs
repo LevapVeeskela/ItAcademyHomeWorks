@@ -28,7 +28,7 @@ namespace BusinessLogic.Services.HW_08
         public bool RunCheckIn()
         {
             Console.WriteLine(Constants.HomeWorkFive.FiftyLines);
-            Console.WriteLine(Constants.CheckIn.TextStageCheckInInfo);
+            Console.WriteLine(Constants.HomeWorkEight.CheckIn.TextStageCheckInInfo);
 
             var person = _cps.GetInfoPerson();
             var result = _cis.CheckTickets(person);
@@ -44,7 +44,7 @@ namespace BusinessLogic.Services.HW_08
         public bool RunSecurityCheck()
         {
             Console.WriteLine(Constants.HomeWorkFive.FiftyLines);
-            Console.WriteLine(Constants.SecurityCheck.TextStageSecurityCheckInfo);
+            Console.WriteLine(Constants.HomeWorkEight.SecurityCheck.TextStageSecurityCheckInfo);
 
             var person = _cps.GetInfoPerson();
             var result = _scs.CheckPerson(person);
@@ -60,12 +60,12 @@ namespace BusinessLogic.Services.HW_08
         public bool RunPassportControl()
         {
             Console.WriteLine(Constants.HomeWorkFive.FiftyLines);
-            Console.WriteLine(Constants.PassportControl.TextStageSPassportControlInfo);
+            Console.WriteLine(Constants.HomeWorkEight.PassportControl.TextStageSPassportControlInfo);
 
             var person = _cps.GetInfoPerson();
             var result = _pcs.CheckInBaseData(person);
 
-            if (WriteOrReadConsoleHelper.GetPromptConfirmation(string.Format(Constants.PassportControl.TextConfirmationVisaInfo, person.CountryDestination)))
+            if (WriteOrReadConsoleHelper.GetPromptConfirmation(string.Format(Constants.HomeWorkEight.PassportControl.TextConfirmationVisaInfo, person.CountryDestination)))
             {
                 if (_pcs.CheckVisa(person))
                 {
@@ -84,11 +84,11 @@ namespace BusinessLogic.Services.HW_08
 
             if (RunRegistration())
             {
-                Console.WriteLine(Constants.RegistrationBase.PatternTextSuccessFlyInfo, person.Passport, person.CountryDestination);
+                Console.WriteLine(Constants.HomeWorkEight.RegistrationBase.PatternTextSuccessFlyInfo, person.Passport, person.CountryDestination);
                 return;
             }
 
-            Console.WriteLine(Constants.RegistrationBase.PatternTextRejectRegistrationInfo, person.Passport, person.CountryDestination);
+            Console.WriteLine(Constants.HomeWorkEight.RegistrationBase.PatternTextRejectRegistrationInfo, person.Passport, person.CountryDestination);
         }
     }
 }
