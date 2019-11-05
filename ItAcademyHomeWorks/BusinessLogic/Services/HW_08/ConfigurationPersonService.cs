@@ -14,7 +14,7 @@ namespace BusinessLogic.Services.HW_08
         public ConfigurationPersonService()
         {   
             Console.WriteLine(Constants.HomeWorkFive.FiftyLines);
-            Console.WriteLine(Constants.ConfigurationPerson.TextStageConfigurationPersonInfo);
+            Console.WriteLine(Constants.HomeWorkEight.ConfigurationPerson.TextStageConfigurationPersonInfo);
             Person = CreateNewPerson();
         }
 
@@ -22,21 +22,21 @@ namespace BusinessLogic.Services.HW_08
         {
             return new PersonModel
             {
-                Passport = string.Format(Constants.ConfigurationPerson.PatternTextInitialsAndPassportInfo, WriteOrReadConsoleHelper.GetStringValueFromConsole(Constants.ConfigurationPerson.TextEnterInitialInfo)),
-                IsHaveBaggage = WriteOrReadConsoleHelper.GetPromptConfirmation(Constants.ConfigurationPerson.TextConfirmationHaveBaggageInfo),
+                Passport = string.Format(Constants.HomeWorkEight.ConfigurationPerson.PatternTextInitialsAndPassportInfo, WriteOrReadConsoleHelper.GetStringValueFromConsole(Constants.HomeWorkEight.ConfigurationPerson.TextEnterInitialInfo)),
+                IsHaveBaggage = WriteOrReadConsoleHelper.GetPromptConfirmation(Constants.HomeWorkEight.ConfigurationPerson.TextConfirmationHaveBaggageInfo),
                 WeightBags =
                     (ushort)WriteOrReadConsoleHelper.GetIntValueFromConsole(
-                        Constants.ConfigurationPerson.TextWeightBaggageInfo, 40),
-                IsHaveCarryon = WriteOrReadConsoleHelper.GetPromptConfirmation(Constants.ConfigurationPerson.TextConfirmationHaveCarryonInfo),
+                        Constants.HomeWorkEight.ConfigurationPerson.TextWeightBaggageInfo, 40),
+                IsHaveCarryon = WriteOrReadConsoleHelper.GetPromptConfirmation(Constants.HomeWorkEight.ConfigurationPerson.TextConfirmationHaveCarryonInfo),
                 IsHaveTickets =
-                    WriteOrReadConsoleHelper.GetPromptConfirmation(Constants.ConfigurationPerson.TextConfirmationHaveTicketsInfo),
+                    WriteOrReadConsoleHelper.GetPromptConfirmation(Constants.HomeWorkEight.ConfigurationPerson.TextConfirmationHaveTicketsInfo),
                 IsHaveProhibitedItems =
-                    WriteOrReadConsoleHelper.GetPromptConfirmation(Constants.ConfigurationPerson.TextConfirmationHaveProhibitedItemsInfo),
+                    WriteOrReadConsoleHelper.GetPromptConfirmation(Constants.HomeWorkEight.ConfigurationPerson.TextConfirmationHaveProhibitedItemsInfo),
                 CountryDestination =
                     WriteOrReadConsoleHelper.GetStringValueFromConsole(
-                        Constants.ConfigurationPerson.TextEnterCountryDestinationInfo),
+                        Constants.HomeWorkEight.ConfigurationPerson.TextEnterCountryDestinationInfo),
                 IsHaveVisa =
-                    WriteOrReadConsoleHelper.GetPromptConfirmation(Constants.ConfigurationPerson.TextConfirmationHaveVisaInfo)
+                    WriteOrReadConsoleHelper.GetPromptConfirmation(Constants.HomeWorkEight.ConfigurationPerson.TextConfirmationHaveVisaInfo)
             };
         }
 

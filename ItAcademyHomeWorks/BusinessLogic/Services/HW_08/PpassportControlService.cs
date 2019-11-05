@@ -9,7 +9,7 @@ namespace BusinessLogic.Services.HW_08
     {
         public bool CheckInBaseData(PersonModel person)
         {
-            Console.WriteLine(Constants.PassportControl.TextImitationCheckPassportInBdInfo);
+            Console.WriteLine(Constants.HomeWorkEight.PassportControl.TextImitationCheckPassportInBdInfo);
             return !string.IsNullOrWhiteSpace(person.Passport);
         }
 
