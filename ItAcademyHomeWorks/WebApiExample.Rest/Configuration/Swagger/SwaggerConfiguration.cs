@@ -22,7 +22,7 @@ namespace WebApiExample.Rest.Configuration.Swagger
 
             app.UseSwagger();
             app.UseSwaggerUI(_ => _.SwaggerEndpoint(url, appCfg.Name));
-
+            
             return app;
         }
     }

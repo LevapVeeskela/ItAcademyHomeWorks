@@ -13,8 +13,14 @@ namespace WebApiExample.Rest.Extensions
         public static TConfiguration GetConfiguration<TConfiguration, TConfigurationImplementation>(
             this IConfiguration configuration,
             string sectionName) where TConfigurationImplementation : TConfiguration
-            => configuration
-                .GetSection(sectionName)
-                .Get<TConfigurationImplementation>();
+        {
+            var s = configuration
+                .GetSection(sectionName);
+            var t = s.Get<TConfigurationImplementation>();
+            return t;
+        }
+            //=> configuration
+            //    .GetSection(sectionName)
+            //    .Get<TConfigurationImplementation>();
     }
 }
